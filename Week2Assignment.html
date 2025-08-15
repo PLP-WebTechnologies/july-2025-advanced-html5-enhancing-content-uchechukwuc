@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Showcase: Lists, Tables, Media & Forms (Week 2 Assignment)</title>
+    <style>
+        /* Basic styling for readability and layout */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 1rem 0;
+            color: #555;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        caption {
+            caption-side: bottom;
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        thead {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tfoot {
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+
+        /* Media Elements */
+        img, video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        legend {
+            font-weight: bold;
+            color: #0056b3;
+            padding: 0 0.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="url"],
+        input[type="search"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c82333;
+        }
+
+        input[readonly] {
+            background-color: #e9ecef;
+            cursor: not-allowed;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Elements Showcase</h1>
+    </header>
+
+    <main>
+        <section id="lists">
+            <h2>Demonstration of Lists</h2>
+            <p>Lists are perfect for organizing related items. Here are a few examples.</p>
+            
+            <h3>My Favorite Web Technologies (Unordered List)</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Node.js</li>
+            </ul>
+            
+
+            <h3>How to Brew a Perfect Cup of Coffee (Ordered List)</h3>
+            <ol>
+                <li>Boil water to the correct temperature (about 90-96°C).</li>
+                <li>Grind your coffee beans to a medium-fine consistency.</li>
+                <li>Place a filter in your dripper and add the ground coffee.</li>
+                <li>Pour hot water over the grounds to 'bloom' them for 30 seconds.</li>
+                <li>Slowly pour the remaining water in a circular motion.</li>
+                <li>Enjoy your freshly brewed coffee! ☕</li>
+            </ol>
+            
+            <h3>Key Web Terms (Definition List)</h3>
+            <dl>
+                <dt><strong>HTML</strong></dt>
+                <dd>HyperText Markup Language, the standard language for creating web pages.</dd>
+                <dt><strong>CSS</strong></dt>
+                <dd>Cascading Style Sheets, a language used to describe the presentation of a document written in HTML.</dd>
+                <dt><strong>DOM</strong></dt>
+                <dd>Document Object Model, a programming interface for web documents that represents the page so that programs can change the document structure, style, and content.</dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <section id="tables">
+            <h2>Demonstration of Tables</h2>
+            <p>Tables are used to display data in a structured, tabular format.</p>
+            <table>
+                <caption>Weekly Project Time Allocation</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Task</th>
+                        <th>Time Allotted (Hours)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Research & Planning</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Development (Frontend)</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Development (Backend)</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Testing & Debugging</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Deployment & Documentation</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total Weekly Hours</td>
+                        <td>24</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <hr>
+        
+        <section id="media">
+            <h2>Demonstration of Media</h2>
+            <p>You can easily embed images, audio, and video into your web pages.</p>
+            
+            <h3>Image</h3>
+            <p>An image of a beautiful landscape. The <code>alt</code> attribute is crucial for accessibility.</p>
+            
+            
+            <h3>Audio</h3>
+            <p>An example of an embedded audio player with native browser controls.</p>
+            <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <h3>Video</h3>
+            <p>An embedded video player with controls and a poster image.</p>
+            <video controls poster="https://via.placeholder.com/900x500.png?text=Video+Poster" src="/media/cc0-videos/flower.webm">
+                Sorry, your browser doesn't support embedded videos.
+            </video>
+        </section>
+        
+        <hr>
+
+        <section id="form">
+            <h2>Enhanced HTML5 Registration Form</h2>
+            <p>This form uses native HTML5 attributes for validation without any JavaScript.</p>
+            
+            <form action="#" method="post" id="registration-form">
+                
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div>
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="e.g., Ada Lovelace" required minlength="3" autocomplete="name">
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+                    </div>
+                    
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required minlength="8" 
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                               title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters">
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g., 080-123-4567" 
+                               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 080-123-4567" autocomplete="tel">
+                    </div>
+                    
+                    <div>
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required max="2007-01-01" min="1920-01-01">
+                    </div>
+
+                    <div>
+                        <label for="avatar">Upload Profile Picture</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferences & Details</legend>
+
+                    <div>
+                        <label for="favcolor">Favorite Color</label>
+                        <input type="color" id="favcolor" name="favcolor" value="#0056b3">
+                    </div>
+
+                    <div>
+                        <label for="skill">Skill Level (1 to 10)</label>
+                        <input type="range" id="skill" name="skill" min="1" max="10" value="5">
+                    </div>
+                    
+                    <div class="radio-group">
+                        <p><strong>Subscription Tier:</strong></p>
+                        <input type="radio" id="free" name="tier" value="free" checked>
+                        <label for="free">Free</label><br>
+                        <input type="radio" id="premium" name="tier" value="premium">
+                        <label for="premium">Premium</label><br>
+                        <input type="radio" id="enterprise" name="tier" value="enterprise">
+                        <label for="enterprise">Enterprise</label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <p><strong>Your Interests:</strong></p>
+                        <input type="checkbox" id="interest_dev" name="interest_dev" value="development">
+                        <label for="interest_dev">Development</label><br>
+                        <input type="checkbox" id="interest_design" name="interest_design" value="design">
+                        <label for="interest_design">Design</label><br>
+                        <input type="checkbox" id="interest_business" name="interest_business" value="business">
+                        <label for="interest_business">Business</label>
+                    </div>
+
+                    <div>
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Please select a country</option>
+                            <option value="NG">Nigeria</option>
+                            <option value="GH">Ghana</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="bio">Biography</label>
+                        <textarea id="bio" name="bio" rows="5" placeholder="Tell us a bit about your professional journey..." maxlength="300"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Final Steps</legend>
+
+                    <div>
+                        <label for="website">Personal Website</label>
+                        <input type="url" id="website" name="website" placeholder="https://your-awesome-site.com">
+                    </div>
+
+                    <div>
+                        <label for="search">Search our Docs</label>
+                        <input type="search" id="search" name="search" placeholder="e.g., HTML forms">
+                    </div>
+                    
+                    <div>
+                        <input type="hidden" id="formVersion" name="formVersion" value="1.2">
+                    </div>
+                    
+                    <div>
+                        <label for="userId">Your User ID (Read-Only)</label>
+                        <input type="text" id="userId" name="userId" value="USER-2025-Q3-A4B7" readonly>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <input type="reset" value="Clear Form">
+                        <input type="submit" value="Register Account">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML5 Showcase. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
